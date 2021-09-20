@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"  
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+             x:Class="XF_Login.Pages.LoginPage"  
+             BackgroundImage="logo.jpg">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Padding="30" Spacing="40">
+            <BoxView HeightRequest="10"/>
+            <Image HorizontalOptions="Center" WidthRequest="300" Source="maco.jpg"/>
+            <Frame BackgroundColor="#BF043055" HasShadow="False">
+                <StackLayout Orientation="Vertical" Spacing="10">
+                    <Label TextColor="#77d065" FontSize = "20" Text="use yor Evax Id or your CIN Number." />
+
+                    <Entry x:Name="evaxId" Text="{Binding Password}" Placeholder="place your Evax Id "   
+                           PlaceholderColor="White" HeightRequest="40"   
+                           TextColor="White"/>
+
+
+                    <Entry x:Name="cin" Text="{Binding Password}" Placeholder="place your cin"   
+                           PlaceholderColor="White" HeightRequest="40"   
+                           TextColor="White"/>
+                </StackLayout>
+            </Frame>
+      
+
+            <Label Text="." FontSize="Large"
+                   x:Name="LabelResults" />
+
+           
+            
+            
+            <Button Text="verify my vaccine" TextColor="Green" FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked" BackgroundColor="#088da5" x:Name="Btn"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>  
